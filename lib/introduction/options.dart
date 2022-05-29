@@ -50,20 +50,6 @@ class Options extends StatelessWidget {
                       const Color.fromARGB(255, 163, 163, 163).withOpacity(.7),
                   borderRadius: BorderRadius.circular(20)),
               child: Stack(children: [
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: SizedBox(
-                      height: 37,
-                      width: 37,
-                      child: Image.asset(
-                        "assets/list.png",
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
                 Center(
                   child: FittedBox(
                     child: Column(
