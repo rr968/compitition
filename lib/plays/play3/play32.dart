@@ -540,6 +540,7 @@ class _Play32State extends State<Play32> {
               InkWell(
                 onTap: () {
                   if (box1.isEmpty || box2.isEmpty) {
+                    tryagain();
                     showDialog(
                         context: context,
                         builder: (context) {
@@ -561,6 +562,7 @@ class _Play32State extends State<Play32> {
                         _isLoading = false;
                       });
                       if (value == 100) {
+                        tryagain();
                         showDialog(
                             context: context,
                             builder: (context) {

@@ -160,9 +160,7 @@ class _Play23State extends State<Play23> {
                   height: screensize.width * .17,
                   child: videoPlayerController23.value.isInitialized
                       ? VideoPlayer(videoPlayerController23)
-                      : const Center(
-                          child: CircularProgressIndicator(),
-                        )),
+                      : const Center()),
             ),
             Positioned(
               top: screensize.height * .79,
@@ -610,6 +608,7 @@ class _Play23State extends State<Play23> {
               InkWell(
                 onTap: () {
                   if (box1.isEmpty || box2.isEmpty) {
+                    tryagain();
                     showDialog(
                         context: context,
                         builder: (context) {
@@ -632,6 +631,7 @@ class _Play23State extends State<Play23> {
                         _isLoading = false;
                       });
                       if (value == 100) {
+                        tryagain();
                         showDialog(
                             context: context,
                             builder: (context) {
