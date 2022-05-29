@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syntax_flutter_parser/plays/certificate.dart';
+import 'package:syntax_flutter_parser/plays/play1/play11.dart';
 
 import '../../fuctions.dart';
 import '../../widget.dart';
@@ -543,6 +544,7 @@ class _Play53State extends State<Play53> {
               InkWell(
                 onTap: () {
                   if (box1.isEmpty || box2.isEmpty) {
+                    tryagain();
                     showDialog(
                         context: context,
                         builder: (context) {
@@ -564,6 +566,7 @@ class _Play53State extends State<Play53> {
                         _isLoading = false;
                       });
                       if (value == 100) {
+                        tryagain();
                         showDialog(
                             context: context,
                             builder: (context) {

@@ -545,6 +545,7 @@ class _Play43State extends State<Play43> {
               InkWell(
                 onTap: () {
                   if (box1.isEmpty || box2.isEmpty) {
+                    tryagain();
                     showDialog(
                         context: context,
                         builder: (context) {
@@ -566,6 +567,7 @@ class _Play43State extends State<Play43> {
                         _isLoading = false;
                       });
                       if (value == 100) {
+                        tryagain();
                         showDialog(
                             context: context,
                             builder: (context) {

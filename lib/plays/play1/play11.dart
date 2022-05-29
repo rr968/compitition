@@ -159,9 +159,7 @@ class _Play11State extends State<Play11> {
                   height: screensize.width * .17,
                   child: videoPlayerController11.value.isInitialized
                       ? VideoPlayer(videoPlayerController11)
-                      : const Center(
-                          child: CircularProgressIndicator(),
-                        )),
+                      : const Center()),
             ),
             Positioned(
               top: screensize.height * .79,
